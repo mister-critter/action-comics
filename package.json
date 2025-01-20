@@ -1,0 +1,25 @@
+{
+  "name": "action-comics",
+  "version": "1.0.0",
+  "description": "An app to get and display the most recent release and the next upcoming release of Action Comics by DC",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "comics",
+    "action",
+    "comics",
+    "dc",
+    "comics"
+  ],
+  "author": "Chris Teague",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
