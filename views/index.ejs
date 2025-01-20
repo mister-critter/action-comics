@@ -12,10 +12,20 @@
     <div class="wrapper">
         <h1 class="title">Action Comics</h1>
         <div class="issue-card">
-            <h2>Latest Release:</h2>
-            <h3><a href="<%= locals.currentIssue.site_detail_url %>" target="_blank">Action Comics <%= locals.currentIssue.issue_number %></a></h3>
-                <h4>Store Date: <%= locals.currentIssue.store_date %></h4>
-                <a href="<%= locals.currentIssue.site_detail_url %>" target="_blank"><img src="<%= locals.currentIssue.image.medium_url %>" alt="Action Comics Cover" style="width: 200px;"></a>
+            <div class="cover">
+                <img
+                    src="<%= locals.currentIssue.image.medium_url %>" alt="Action Comics Cover">
+                </div>
+                <div class="info">
+                    <h2>Latest Release:</h2>
+                    <h3 class="issue-title">Action Comics #<%=
+                                locals.currentIssue.issue_number %></h3>
+                    <p><%= locals.currentIssue.store_date %>
+                    </p>
+                    <div class="description"><%- locals.currentIssue.description %></div>
+                    <a href="<%= locals.currentIssue.site_detail_url %>"
+                        target="_blank"><button>More Info</button></a>
+                </div>
         </div>
     </div>
 </body>

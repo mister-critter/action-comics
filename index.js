@@ -17,6 +17,14 @@ app.get("/", async (req, res) => {
     try {
         const response = await axios.get(`https://comicvine.gamespot.com/api/issues/?api_key=${myAPIkey}&format=json&filter=volume:91078&sort=store_date:desc`);
         const result = response.data.results;
+
+        // Format the store_date
+        result.forEach(issue => {
+            const date = new Date(issue.store_date);
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            issue.store_date = date.toLocaleDateString('en-US', options);
+        });
+
         res.render("index.ejs", { currentIssue: result[0] });
 
     } catch (error) {
