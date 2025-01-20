@@ -29,6 +29,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 h1.title {
