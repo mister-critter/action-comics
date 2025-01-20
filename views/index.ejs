@@ -12,16 +12,10 @@
     <div class="wrapper">
         <h1 class="title">Action Comics</h1>
         <div class="issue-card">
-            <h2>This Month</h2>
+            <h2>Latest Release:</h2>
             <h3>Action Comics <%= locals.currentIssue.issue_number %></h3>
-            <h4>Cover Date: <%= locals.currentIssue.cover_date %></h4>
+                <h4>Store Date: <%= locals.currentIssue.store_date %></h4>
             <img src="<%= locals.currentIssue.image.medium_url %>" alt="Action Comics Cover" style="width: 200px;">
-        </div>
-        <div class="issue-card">
-            <h2>Next Month</h2>
-            <h3>Action Comics <%= locals.latestIssue.issue_number %></h3>
-                <h4>Cover Date: <%= locals.latestIssue.cover_date %></h4>
-            <img src="<%= locals.latestIssue.image.medium_url %>" alt="Action Comics Cover" style="width: 200px;">
         </div>
     </div>
 </body>
