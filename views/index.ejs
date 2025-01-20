@@ -13,9 +13,9 @@
         <h1 class="title">Action Comics</h1>
         <div class="issue-card">
             <h2>Latest Release:</h2>
-            <h3>Action Comics <%= locals.currentIssue.issue_number %></h3>
+            <h3><a href="<%= locals.currentIssue.site_detail_url %>" target="_blank">Action Comics <%= locals.currentIssue.issue_number %></a></h3>
                 <h4>Store Date: <%= locals.currentIssue.store_date %></h4>
-            <img src="<%= locals.currentIssue.image.medium_url %>" alt="Action Comics Cover" style="width: 200px;">
+                <a href="<%= locals.currentIssue.site_detail_url %>" target="_blank"><img src="<%= locals.currentIssue.image.medium_url %>" alt="Action Comics Cover" style="width: 200px;"></a>
         </div>
     </div>
 </body>
